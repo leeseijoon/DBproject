@@ -5,11 +5,11 @@ $(document).ready (function (){
 
 
 
-function cmpnyList() {
+function userList() {
 
 	$.ajax ({
 		method	: "post",
-		url		: "/user/userlist.json",
+		url		: "/user/GetUserlist.json",
 		success	: function (list) {
 			
 			str_html ="<div class=\"col-xs-12\">";
