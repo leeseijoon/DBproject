@@ -1,0 +1,125 @@
+﻿/*!
+ * Start Bootstrap - Business Casual (https://startbootstrap.com/template-overviews/business-casual)
+ * Copyright 2013-2017 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-business-casual/blob/master/LICENSE)
+ */
+
+body {
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+color:black;
+background-color: rgb(200, 200, 200);
+  
+  
+}
+
+.join {
+	color: white;
+}
+
+.navbar_div{
+color:black;
+}
+
+.title_div{
+color:white;
+
+ 
+}
+
+.bg_container {
+    position: relative;
+}
+
+.bg_container::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0; 
+    background: url(/resources/images/base/background.jpg) no-repeat center center fixed;
+ -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+    content: "";
+    z-index: -1;
+
+}
+
+.bg_main_container{
+	position: ablsolute;
+	 left: 0;
+    right: 0; 
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+    content: "";
+    z-index: -1;
+	background-color: rgb(200, 200, 200);
+}
+
+
+
+h1, h2, h3, h4, h5, h6, .text-heading {
+  font-family: "Josefin Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+.tagline-upper {
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.tagline-lower {
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.text-expanded {
+  letter-spacing: 2px;
+}
+
+.text-shadow {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
+}
+
+.text-lg {
+  font-size: 1.25rem;
+}
+
+.bg-faded {
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+.bg-overlay {
+  background-color: rgba(0, 0, 0, 0.1);
+
+}
+
+hr.divider {
+  border-color: #292b2c;
+  max-width: 250px;
+}
+
+.map-container iframe {
+  pointer-events: none;
+}
+
+.map-container iframe.clicked {
+  pointer-events: auto;
+}
+
+.slide_img{
+   opacity: 1;
+    filter: alpha(opacity=100); /* For IE8 and earlier */
+}
+
+.footer{
+	background-color: rgb(240, 240, 240);
+}
+
