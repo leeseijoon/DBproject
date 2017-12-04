@@ -24,7 +24,6 @@ public class UserController {
 	}
 	
 	@RequestMapping("/GetUserlist")
-<<<<<<< HEAD
 	public String userlist() {
 		return "user/userlist/userlistView";
 	}
@@ -35,9 +34,8 @@ public class UserController {
 	}
 	
 
-=======
+
 	public String preHome() {
 		return "user/userlist/userlistView";
 	}
->>>>>>> 2767caa017be2739fa72e21f2fc88e1cd59d60e4
 }
