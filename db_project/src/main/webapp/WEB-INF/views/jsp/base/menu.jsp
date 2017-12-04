@@ -32,4 +32,5 @@
        	</div>
 	</div>
 </nav>
-</div>    
+</div>
+<div id="content_container">

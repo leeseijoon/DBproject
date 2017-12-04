@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.database.db_project.user.User">
+<mapper namespace="com.database.db_project.user">
 
 	<insert  id="create" parameterType ="com.database.db_project.user.User" useGeneratedKeys="true"
     keyProperty="u_id">
@@ -25,12 +25,12 @@
 
 	
 	<select id="findAll" resultType="com.database.db_project.user.User" parameterType="com.database.db_project.user.User">
-		SELECT * FROM "user"
+		SELECT * FROM user
 	</select>
 
 	
 	<select id="findOne" resultType="com.database.db_project.user.User" parameterType="com.database.db_project.user.User">
-		SELECT * FROM "user" WHERE "u_id" = #{u_id} 
+		SELECT * FROM user WHERE "u_id" = #{u_id} 
 	</select>
 	
 </mapper>

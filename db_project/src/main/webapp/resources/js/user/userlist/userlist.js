@@ -5,7 +5,6 @@ $(document).ready (function (){
 
 
 function userList() {
-	alert("userlist func");
 	$.ajax ({
 		method	: "post",
 		url		: "/user/GetUserlist.json",
@@ -28,7 +27,6 @@ function userList() {
 			
 		},
 		complete	: function () {
-			alert(list);
 		},
 		error		: function (a) {
 			alert("error");

@@ -33,9 +33,15 @@ public class UserController {
 		return "user/myInfo/myInfoView";
 	}
 	
-
-
-	public String preHome() {
-		return "user/userlist/userlistView";
+	@RequestMapping("/userLogin")
+	public String userLogin() {
+		return "user/userLogin/userLoginView";
 	}
+	
+	@RequestMapping("/userJoin")
+	public String userJoin() {
+		return "user/userJoin/userJoinView";
+	}
+	
+
 }
