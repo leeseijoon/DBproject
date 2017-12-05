@@ -6,7 +6,7 @@ import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.database.db_project.user.User;
+import com.database.db_project.userInfo.UserInfo;
 
 
 
@@ -27,7 +27,7 @@ public class SessionUtil {
 		HttpSession session = getNewSession(request);
 		session.setAttribute(attributeName, object);
 	}*/
-	public void setNewSession(String attributeName, User object) {
+	public void setNewSession(String attributeName, UserInfo object) {
 		HttpServletRequest request = this.commonUtil.getCurrentRequest();
 		
 		HttpSession session = getNewSession(request);
@@ -48,11 +48,11 @@ public class SessionUtil {
 	 * @return
 	 * @throws RuntimeException
 	 */
-	public User getSessionBean() throws RuntimeException {
+	public UserInfo getSessionBean() throws RuntimeException {
 		HttpServletRequest request = this.commonUtil.getCurrentRequest();
 		
 		HttpSession session = request.getSession(false);
-		return (User)session.getAttribute("SessionBean");
+		return (UserInfo)session.getAttribute("SessionBean");
 		
 		//if (session != null) return (UsrInfo) session.getAttribute(CommonConstant.USER_SESSION_NAME);
 		//else return null;

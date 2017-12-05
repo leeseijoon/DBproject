@@ -1,17 +1,17 @@
-package com.database.db_project.user;
+package com.database.db_project.userInfo;
 
 import java.io.Serializable;
 
 import org.springframework.stereotype.Repository;
 
 @Repository("user")
-public class User implements Serializable {
+public class UserInfo implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	private String u_id;
 	private String u_password;
 	private String u_name;
-	private String u_auth;
+	private Integer u_auth;
 	private String u_phonenum;
 	
 	public String getU_id() {
@@ -32,10 +32,10 @@ public class User implements Serializable {
 	public void setU_name(String u_name) {
 		this.u_name = u_name;
 	}
-	public String getU_auth() {
+	public Integer getU_auth() {
 		return u_auth;
 	}
-	public void setU_auth(String u_auth) {
+	public void setU_auth(Integer u_auth) {
 		this.u_auth = u_auth;
 	}
 	public String getU_phonenum() {
