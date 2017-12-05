@@ -16,5 +16,4 @@ $(document).ready(function(){
 		 str_html+="님 환영합니다!</h4>";
 	 }
 	 $("#userlist").html (str_html);
-	 alert(str_html);
  }

@@ -38,7 +38,7 @@ public class CommonUtil {
         int sec = cal.get(Calendar.SECOND);
         
         String y = Integer.toString(year);
-        String m = Integer.toString(month);
+         String m = Integer.toString(month);
         String d = Integer.toString(day);
         String h = Integer.toString(hour);
         String mi = Integer.toString(min);
