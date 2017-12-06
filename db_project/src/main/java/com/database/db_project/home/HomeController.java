@@ -13,8 +13,13 @@ public class HomeController {
 	 *home url 맵핑입니다.
 	 */
 	@RequestMapping("/test")
-	public String home() {
+	public String hometest() {
 		return "chart/chartView";
+	}
+	
+	@RequestMapping("/")
+	public String Home() {
+		return "home/homeView";
 	}
 	
 	@RequestMapping("/home")
