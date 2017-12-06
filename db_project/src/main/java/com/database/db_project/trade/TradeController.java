@@ -13,11 +13,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.database.db_project.userInfo.UserInfo;
+import com.database.db_project.userInfo.UserInfoService;
 
 
 @Controller
 @RequestMapping(value="/trade")
 public class TradeController {
+	
+	private TradeService tradeService;
+	
 	/**
 	 *trade url 맵핑입니다.
 	 */
@@ -41,15 +45,14 @@ public class TradeController {
 		return "trade/BTC/BTCView";
 	}
 	
-	//회원가입
-	/*
+	//BTC 구매 오더 등록
 	@RequestMapping(value = "/BTC", method = RequestMethod.POST)
 	public String createBuyOrder (HttpServletRequest request, @ModelAttribute("model_entity") 
-		@Validated UserInfo entity, BindingResult errors) throws Exception {
-		userService.create(entity);
+		@Validated OrderInfo entity, BindingResult errors) throws Exception {
+		//tradeService.create(entity);
 		return "/home/homeView";
 	}
-	*/
+	
 	@RequestMapping("/dev")
 	public String dev(Locale locale, Model model) {
 
