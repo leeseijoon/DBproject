@@ -1,4 +1,4 @@
-﻿/*!
+/*!
  * Start Bootstrap - Business Casual (https://startbootstrap.com/template-overviews/business-casual)
  * Copyright 2013-2017 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-business-casual/blob/master/LICENSE)
@@ -118,8 +118,20 @@ hr.divider {
    opacity: 1;
     filter: alpha(opacity=100); /* For IE8 and earlier */
 }
+#content_container{
+	margin: 30px;
+}
 
-.footer{
+.push{
+	margin:30px;
+}
+.foot{
+	margin-top: 50px;
+	position: absolute;
+  right: 0;
+  left: 0;
+  padding: 1rem;
+  text-align: center;
 	background-color: rgb(240, 240, 240);
 }
 

@@ -26,10 +26,11 @@
               		<a class="nav-link text-uppercase text-expanded text-black" href="index.html"><b>Deposits/Withdrawals</b></a>
             	</li>
             	<li class="nav-item px-lg-4">
-              		<a class="nav-link text-uppercase text-expanded text-black" href="index.html"><b>free_board</b></a>
+              		<a class="nav-link text-uppercase text-expanded text-black" href="/board/boardList"><b>free_board</b></a>
             	</li>
           	</ul>
        	</div>
 	</div>
 </nav>
-</div>    
+</div>
+<div id="content_container">

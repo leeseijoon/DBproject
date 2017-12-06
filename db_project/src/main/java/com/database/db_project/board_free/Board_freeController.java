@@ -41,6 +41,12 @@ public class Board_freeController {
 		return "board/boardRead/boardReadView";
 	}
 	
+	//게시판 검색 화면
+	@RequestMapping("/board/boardSearch")
+	public String boardEdit() {
+		return "board/boardSearch/boardSearchView";
+	}
+	
 		
 	//게시판리스트 정보 가져오기
 	@RequestMapping(value = "/board/GetBoardList.json", method = RequestMethod.POST)
@@ -67,6 +73,8 @@ public class Board_freeController {
 		board_freeService.create(entity);
 		return "redirect:/board/boardList";
 	}
+	
+	
 	
 	
 
