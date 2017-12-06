@@ -42,13 +42,14 @@ public class TradeController {
 	}
 	
 	//회원가입
+	/*
 	@RequestMapping(value = "/BTC", method = RequestMethod.POST)
-	public String createUsrInfo (HttpServletRequest request, @ModelAttribute("model_entity") 
+	public String createBuyOrder (HttpServletRequest request, @ModelAttribute("model_entity") 
 		@Validated UserInfo entity, BindingResult errors) throws Exception {
 		userService.create(entity);
 		return "/home/homeView";
 	}
-	
+	*/
 	@RequestMapping("/dev")
 	public String dev(Locale locale, Model model) {
 
