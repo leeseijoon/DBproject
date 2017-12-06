@@ -3,5 +3,5 @@
 <jsp:forward page="../base/home_base_template.jsp"> 
 	<jsp:param name="CONTENT" value="../chart/chart.jsp" /> 
     <jsp:param name="CSS" value="" />
-    <jsp:param name="SCRIPT" value="" />
+    <jsp:param name="SCRIPT" value="../chart/scriptList.jsp" />
 </jsp:forward>
