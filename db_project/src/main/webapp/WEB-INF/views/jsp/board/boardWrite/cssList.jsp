@@ -6,3 +6,4 @@
 
 <!-- include summernote css/js-->
 <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.8/summernote.css" rel="stylesheet">
+<link href="/resources/css/board/boardList/boardList.css" rel="stylesheet">

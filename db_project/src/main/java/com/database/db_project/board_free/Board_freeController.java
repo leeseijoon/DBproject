@@ -43,6 +43,11 @@ public class Board_freeController {
 	
 	//게시판 검색 화면
 	@RequestMapping("/board/boardSearch")
+	public String boardSearch() {
+		return "board/boardSearch/boardSearchView";
+	}
+	//게시판 검색 화면
+	@RequestMapping("/board/boardEdit")
 	public String boardEdit() {
 		return "board/boardSearch/boardSearchView";
 	}
@@ -57,11 +62,14 @@ public class Board_freeController {
 		return list;
 	}
 	
-	//특정 게시판 정보 가져오기
+	//특정 게시판 정보 가져오기 & 조회수 1 추가
 	@RequestMapping(value = "/board/GetBoardInfo.json", method = RequestMethod.POST)
 	@ResponseBody
 	public Board_free GetBoardInfo (@ModelAttribute Board_free entity) throws Exception{
-		Board_free list= board_freeService.findOne(entity);
+		//조회수 1추가
+		board_freeService.updateHit(entity);
+		//특정게시판 정보 가져오기
+		Board_free list = board_freeService.findOne(entity);
 		
 		return list;
 	}
@@ -75,6 +83,14 @@ public class Board_freeController {
 	}
 	
 	
+	//검색한 게시판리스트 정보 가져오기
+	@RequestMapping(value = "/board/GetSearchBoardList.json", method = RequestMethod.POST)
+	@ResponseBody
+	public List<Board_free> GetSearchBoardList (@ModelAttribute Board_free entity) throws Exception{
+		List<Board_free> list= board_freeService.searchBoardList(entity);
+		
+		return list;
+	}
 	
 	
 

@@ -30,5 +30,12 @@ public class Board_freeService {
 		return board_freeRepository.create(entity);
 	}
 	
-
+	public List<Board_free> searchBoardList(Board_free entity) throws Exception {
+		return board_freeRepository.searchBoardList(entity);
+	}
+	
+	
+	public void updateHit(Board_free entity) throws Exception {
+		board_freeRepository.updateHit(entity);
+	}
 }

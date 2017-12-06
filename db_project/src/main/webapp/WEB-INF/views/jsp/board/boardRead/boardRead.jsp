@@ -6,8 +6,7 @@
                           <h3>게시판</h3>
                           <form action="#" class="pull-right position">
                               <div class="input-append">
-                                  <input type="text" class="sr-input" placeholder="검색">
-                                  <button class="btn sr-btn" type="button"><i class="fa fa-search"></i></button>
+                                  
                               </div>
                           </form>
                       </div>
