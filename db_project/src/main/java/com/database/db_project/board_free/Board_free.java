@@ -14,7 +14,9 @@ public class Board_free implements Serializable {
 	private String b_date;
 	private Integer b_hit;
 	private String u_id;
-	private String b_password;
+	
+	
+	
 	public Integer getB_no() {
 		return b_no;
 	}
@@ -51,12 +53,5 @@ public class Board_free implements Serializable {
 	public void setU_id(String u_id) {
 		this.u_id = u_id;
 	}
-	public String getB_Password() {
-		return b_password;
-	}
-	public void setB_Password(String b_password) {
-		this.b_password = b_password;
-	}
-	
-	
+
 }

@@ -24,18 +24,39 @@ public class Board_freeService {
 		return board_freeRepository.findOne(entity);
 	}
 	
+	public Board_free GetBoardU_id(Board_free entity) throws Exception {
+		return board_freeRepository.GetBoardU_id(entity);
+	}
+	
 	public List<Board_free> create(Board_free entity) throws Exception {
 		entity.setB_date(commonUtil.getCurrentDtime());
 		entity.setB_hit(1);
 		return board_freeRepository.create(entity);
 	}
 	
-	public List<Board_free> searchBoardList(Board_free entity) throws Exception {
-		return board_freeRepository.searchBoardList(entity);
+	public List<Board_free> searchBoardListByTitle(String searchKeyword) throws Exception {
+		return board_freeRepository.searchBoardListByTitle(searchKeyword);
 	}
+	
+	public List<Board_free> searchBoardListByTitleContent(String searchKeyword) throws Exception {
+		return board_freeRepository.searchBoardListByTitleContent(searchKeyword);
+	}
+	
+	public List<Board_free> searchBoardListByContent(String searchKeyword) throws Exception {
+		return board_freeRepository.searchBoardListByContent(searchKeyword);
+	}
+	
+	public List<Board_free> searchBoardListById(String searchKeyword) throws Exception {
+		return board_freeRepository.searchBoardListById(searchKeyword);
+	}
+	
 	
 	
 	public void updateHit(Board_free entity) throws Exception {
 		board_freeRepository.updateHit(entity);
+	}
+	
+	public void updateBoard(Board_free entity) throws Exception {
+		board_freeRepository.updateBoard(entity);
 	}
 }

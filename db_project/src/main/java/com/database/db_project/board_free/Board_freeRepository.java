@@ -31,17 +31,47 @@ public class Board_freeRepository {
 		
 	}
 	
-	//검색한 게시판리스트 select
-	public List<Board_free>	searchBoardList(Board_free entity) throws Exception{
-		List<Board_free> list = sqlSession.selectList("com.database.db_project.board_free.searchBoardList", entity);
+	public Board_free GetBoardU_id(Board_free entity) throws Exception{
+		return sqlSession.selectOne("com.database.db_project.board_free.GetBoardU_id", entity);
+		
+	}
+	
+	
+	//검색한 게시판리스트 title로 select
+	public List<Board_free>	searchBoardListByTitle(String searchKeyword) throws Exception{
+		List<Board_free> list = sqlSession.selectList("com.database.db_project.board_free.searchBoardListByTitle", searchKeyword);
 			
 		return list;
 	}
 	
+	//검색한 게시판리스트 content로 select
+	public List<Board_free>	searchBoardListByContent(String searchKeyword) throws Exception{
+		List<Board_free> list = sqlSession.selectList("com.database.db_project.board_free.searchBoardListByContent", searchKeyword);
+				
+		return list;
+	}
+	
+	//검색한 게시판리스트 Title과 content로 select
+	public List<Board_free>	searchBoardListByTitleContent(String searchKeyword) throws Exception{
+		List<Board_free> list = sqlSession.selectList("com.database.db_project.board_free.searchBoardListByTitleContent", searchKeyword);
+					
+		return list;
+	}
+		
+	//검색한 게시판리스트 Id로 select
+	public List<Board_free>	searchBoardListById(String searchKeyword) throws Exception{
+		List<Board_free> list = sqlSession.selectList("com.database.db_project.board_free.searchBoardListById", searchKeyword);
+				
+		return list;
+	}
 	
 	
 	//하나의 게시글의 조회수(hit) 값을 +1 올려줌
 	public void	updateHit(Board_free entity) throws Exception{
 		sqlSession.update("com.database.db_project.board_free.updateHit", entity);
+	}
+	//하나의 게시글의 조회수(hit) 값을 +1 올려줌
+	public void	updateBoard(Board_free entity) throws Exception{
+		sqlSession.update("com.database.db_project.board_free.updateBoard", entity);
 	}
 }

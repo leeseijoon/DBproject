@@ -20,6 +20,11 @@
         where b_no = #{b_no}   
 	</update>
  
+ 	<update id="updateBoard" parameterType="com.database.db_project.board_free.Board_free">
+    	update board_free
+    	set b_title = #{b_title}, b_content = #{b_content}
+        where b_no = #{b_no} and if(u_id=#{u_id}, 'Y', 'N') = 'Y'
+	</update>
 
 	
 	<select id="findAll" resultType="com.database.db_project.board_free.Board_free" parameterType="com.database.db_project.board_free.Board_free">
@@ -30,9 +35,31 @@
 		SELECT * FROM board_free where b_no=#{b_no}
 	</select>
 	
-	<select id="searchBoardList" resultType="com.database.db_project.board_free.Board_free" parameterType="com.database.db_project.board_free.Board_free">
-		SELECT * FROM board_free where b_no=#{b_no}
+	<select id="GetBoardU_id" resultType="com.database.db_project.board_free.Board_free" parameterType="com.database.db_project.board_free.Board_free">
+		SELECT u_id FROM board_free where b_no=#{b_no}
+	</select>
+	
+	
+	<!-- Search -->
+	<select id="searchBoardListByTitle" resultType="com.database.db_project.board_free.Board_free" parameterType="String">
+		SELECT * FROM board_free where b_title like CONCAT('%',#{searchKeyword},'%')
 	</select>
 
+	<select id="searchBoardListByContent" resultType="com.database.db_project.board_free.Board_free" parameterType="String">
+		SELECT * FROM board_free where b_content like CONCAT('%',#{searchKeyword},'%')
+	</select>
+	
+	
+	<select id="searchBoardListByTitleContent" resultType="com.database.db_project.board_free.Board_free" parameterType="String">
+		SELECT * FROM board_free
+		where b_title like CONCAT('%',#{searchKeyword},'%')
+		or  b_content like CONCAT('%',#{searchKeyword},'%')
+	</select>
+	
+	
+	<select id="searchBoardListById" resultType="com.database.db_project.board_free.Board_free" parameterType="String">
+		SELECT * FROM board_free where u_id like CONCAT('%',#{searchKeyword},'%')
+	</select>
+	<!-- Search -->
 	
 </mapper>

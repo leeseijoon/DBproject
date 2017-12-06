@@ -1,5 +1,6 @@
 package com.database.db_project.board_free;
 
+import java.util.HashMap;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -46,11 +47,8 @@ public class Board_freeController {
 	public String boardSearch() {
 		return "board/boardSearch/boardSearchView";
 	}
-	//게시판 검색 화면
-	@RequestMapping("/board/boardEdit")
-	public String boardEdit() {
-		return "board/boardSearch/boardSearchView";
-	}
+
+	
 	
 		
 	//게시판리스트 정보 가져오기
@@ -86,13 +84,43 @@ public class Board_freeController {
 	//검색한 게시판리스트 정보 가져오기
 	@RequestMapping(value = "/board/GetSearchBoardList.json", method = RequestMethod.POST)
 	@ResponseBody
-	public List<Board_free> GetSearchBoardList (@ModelAttribute Board_free entity) throws Exception{
-		List<Board_free> list= board_freeService.searchBoardList(entity);
+	public List<Board_free> GetSearchBoardList (Integer searchOption, String searchKeyword) throws Exception{
+		List<Board_free> list;
+		if(searchOption==0) {
+			list= board_freeService.searchBoardListByTitle(searchKeyword);
+		}
+		else if(searchOption==1){
+			list= board_freeService.searchBoardListByContent(searchKeyword);	
+		}
+		else if(searchOption==2){
+			list= board_freeService.searchBoardListByTitleContent(searchKeyword);
+		}
+		else {// if(searchOption==3){
+			list= board_freeService.searchBoardListById(searchKeyword);
+		}
+
 		
 		return list;
 	}
 	
+	//특정 게시판 업데이트(수정)	
+	@RequestMapping(value = "/board/boardUpdate/send", method = RequestMethod.POST)
+	public String UpdateBoard (HttpServletRequest request, @ModelAttribute("model_entity") 
+		@Validated Board_free entity, BindingResult errors) throws Exception {
+		//글 제목, 내용 변경
+		board_freeService.updateBoard(entity);
+				
+		return "redirect:/board/boardList";
+	}
 	
+	//특정 게시판번호를 갖은 게시판의 작성자 값 가져오기
+	@RequestMapping(value = "/board/GetBoardU_id.json", method = RequestMethod.POST)
+	@ResponseBody
+	public Board_free GetBoardU_id (@ModelAttribute Board_free entity) throws Exception{
+		Board_free list = board_freeService.GetBoardU_id(entity);
+		
+		return list;
+	}
 
 
 }

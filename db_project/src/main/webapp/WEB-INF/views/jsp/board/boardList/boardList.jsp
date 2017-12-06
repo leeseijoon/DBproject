@@ -7,17 +7,17 @@
 	                  <aside class="lg-side">
 	                      <div class="inbox-head">
 	                          <h3>게시판</h3>
-	                          <form action="#" class="form-inline pull-right position">
+	                          <form action="" class="form-inline pull-right position">
 
-	                              <select id="searchOption" class="form-control">
-	                              	 <option>제목</option> 
-		                              <option>내용</option> 
-		                              <option>제목 + 내용</option>
-		                               <option>글쓴이</option> 
+	                              <select name="searchOption" id="searchOption" class="form-control">
+	                              	 <option value="0">제목</option> 
+		                              <option value="1">내용</option> 
+		                              <option value="2">제목 + 내용</option>
+		                               <option value="3">글쓴이</option> 
 	                                </select>
 	
-	                                  <input type="text" class="sr-input" placeholder="검색">
-	                                  <button class="btn sr-btn" type="button"><i class="fa fa-search"></i></button>
+	                                  <input id="searchKeyword" type="text" class="sr-input" placeholder="검색">
+	                                  <button id="searchBoard" onclick="searchList()" class="btn sr-btn" type="button"><i class="fa fa-search"></i></button>
 	    
 
 	
@@ -28,7 +28,7 @@
 	                             
 									<div id="table_content"></div>
 									<div align="right">
-	                               		<button onclick = "location.href ='/board/boardWrite'" class="btn btn-info btn-lg">
+	                               		<button onclick = "b_write()" class="btn btn-info btn-lg">
 	                    						<span class="glyphicon glyphicon-pencil"></span> 글쓰기
 	        							</button>
 	        							</div>

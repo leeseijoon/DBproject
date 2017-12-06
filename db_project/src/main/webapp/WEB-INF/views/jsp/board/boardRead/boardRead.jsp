@@ -16,18 +16,10 @@
         		<div id="BoardView"></div>
         	</div>
        	</div>
-
+		
          <!-- (3): Javascript code to replace textarea with id='editor1' by CKEditor -->
-         <div align="right">
-		<button type="button" onclick="location.href='/board/boardList'" class="btn btn-info btn-lg">
-          <span class="glyphicon glyphicon-list-alt"></span>목록 
-        </button>
-        <button type="button" onclick="location.href='/board/boardWrite'" class="btn btn-info btn-lg">
-          <span class="glyphicon glyphicon-pencil"></span> 글쓰기
-        </button>
-        <button type=""button" onclick="location.href='/board/boardList'" class="btn btn-info btn-lg">
-          <span class="glyphicon glyphicon-edit"></span> 수정 
-        </button>
-        </div>
-             
+   
+        <div id="buttons"></div>
+
+             </form>
     </form>
