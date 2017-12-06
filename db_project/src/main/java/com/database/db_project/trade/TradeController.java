@@ -1,4 +1,4 @@
-package com.database.db_project.home;
+package com.database.db_project.trade;
 
 import java.util.Locale;
 
@@ -8,23 +8,29 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 
 @Controller
-public class HomeController {
+@RequestMapping(value="/trade")
+public class TradeController {
 	/**
-	 *home url 맵핑입니다.
+	 *trade url 맵핑입니다.
 	 */
 	@RequestMapping("/test")
-	public String hometest() {
+	public String trade() {
 		return "chart/chartView";
 	}
 	
 	@RequestMapping("/")
-	public String Home() {
-		return "home/homeView";
+	public String empty() {
+		return "trade/homeView";
 	}
 	
 	@RequestMapping("/home")
 	public String preHome() {
-		return "home/homeView";
+		return "trade/homeView";
+	}
+	
+	@RequestMapping("/BTC")
+	public String BTC() {
+		return "trade/BTC/BTCView";
 	}
 	
 	@RequestMapping("/dev")
