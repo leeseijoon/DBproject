@@ -3,10 +3,10 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
  <div class="container bg_main_container">
 
-	<h1>Trade BTC</h1>
+	<h1>Trade XRP</h1>
 	
 <div class="row">
-  <div class="col-md-6">My current BTC : <span id="mybtc">a</span>
+  <div class="col-md-6">My current XRP : <span id="myxrp">a</span>
   </div>
   <div class="col-md-6">My current KRW : <span id="mykrw">a</span>
   </div>
@@ -27,14 +27,14 @@
 <div class="row" style="margin:20px">
 <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
 
-    <form name="buysellbtc" method="post">
+    <form name="buysell" method="post">
      	<input type="hidden" id="u_id" name="u_id" value=<%=session.getAttribute("u_id") %> />
      	
      	<fieldset>		
-				<h2 id="titletext">BUY / SELL BTC</h2>
-				<input type="hidden" name = "c_idx" id="c_idx" value="1" />
+				<h2 id="titletext">BUY / SELL XRP</h2>
+				<input type="hidden" name = "c_idx" id="c_idx" value="3" />
 				<div class="form-group">
-                   Amount(BTC) <input type="number" min = 0 step = "0.000001" name="e_quantity" id="AmountBTC1" class="form-control input-lg">
+                   Amount(XRP) <input type="number" min = 0 step = "0.000001" name="e_quantity" id="AmountBTC1" class="form-control input-lg">
 				</div>
 				<div class="form-group">
                    Price(KRW) <input type="number" min = 0 name="e_price" id="AmountKW1" class="form-control input-lg" >
@@ -44,10 +44,10 @@
 				</div>
 				<div class="row">
 					<div class="col-xs-6 col-sm-6 col-md-6">
-                        <input type="submit" id = "btnbuybtc" class="btn btn-lg btn-success btn-block" value="Buy">
+                        <input type="submit" id = "btnbuy" class="btn btn-lg btn-success btn-block" value="Buy">
 					</div>
 					<div class="col-xs-6 col-sm-6 col-md-6">
-                        <input type="submit" id = "btnsellbtc" class="btn btn-lg btn-success btn-block" value="Sell">
+                        <input type="submit" id = "btnsell" class="btn btn-lg btn-success btn-block" value="Sell">
 					</div>
 				</div>
 			</fieldset>

@@ -3,15 +3,15 @@ $(document).ready (function (){
 	$.getJSON("https://api.coinone.co.kr/ticker/?format=json&currency", function(data) {
 	    //data is the JSON string
 		
-		$("#coin_high").text(setComma(Math.floor(data.btc.high)));
-		$("#coin_low").text(setComma(Math.floor(data.btc.low)));
-		$("#coin_last").text(setComma(Math.floor(data.btc.last)));
+		$("#coin_high").text(setComma(Math.floor(data.xrp.high)));
+		$("#coin_low").text(setComma(Math.floor(data.xrp.low)));
+		$("#coin_last").text(setComma(Math.floor(data.xrp.last)));
 	});
 	
 	getUsrBudget();
 	
 
-	$("#btnbuybtc").click(function(){
+	$("#btnbuy").click(function(){
 	    // 태크.val() : 태그에 입력된 값
 	    // 태크.val("값") : 태그의 값을 변경 
 
@@ -20,23 +20,23 @@ $(document).ready (function (){
 	        return; // 함수 종료
 	    }
 
-	    var f=document.buysellbtc;
-	    f.action="/trade/BTC/buy"
+	    var f=document.buysell;
+	    f.action="/trade/XRP/buy"
 	    // 제출
 	    f.submit();
 	});
 
 
-	$("#btnsellbtc").click(function(){
+	$("#btnsell").click(function(){
 	    // 태크.val() : 태그에 입력된 값
 	    // 태크.val("값") : 태그의 값을 변경 
 	    if( str_myBTC < $("#AmountBTC1").val()){ // 내가 현재 갖고있는돈이 필요한  BTC보다 적음
-	        alert("out of range (BTC)");	// 구매가능한 BTC 양을 소지하고있지 않음 알라트
+	        alert("out of range (XRP)");	// 구매가능한 BTC 양을 소지하고있지 않음 알라트
 	        return; // 함수 종료
 	    }
 
-	    var f=document.buysellbtc;
-	    f.action="/trade/BTC/sell"
+	    var f=document.buysell;
+	    f.action="/trade/XRP/sell"
 	    // 조건에 충족되면 제출
 	    f.submit();
 	});
@@ -96,7 +96,7 @@ function getUsrBudget(){
 				
 			},
 			complete	: function () {
-				$("#mybtc").text(str_myBTC);
+				$("#myxrp").text(str_myXRP);
 				$("#mykrw").text(str_myWon);
 
 			},

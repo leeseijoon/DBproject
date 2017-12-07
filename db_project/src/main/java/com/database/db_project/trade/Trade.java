@@ -5,7 +5,7 @@ import java.io.Serializable;
 import org.springframework.stereotype.Repository;
 
 @Repository("trade")
-public class OrderInfo implements Serializable {
+public class Trade implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	private Integer e_idx;
@@ -15,6 +15,7 @@ public class OrderInfo implements Serializable {
 	private Integer e_price;
 	private double e_quantity;
 	private String e_date;
+	
 	public Integer getE_idx() {
 		return e_idx;
 	}
