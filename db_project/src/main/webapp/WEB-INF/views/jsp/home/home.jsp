@@ -1,7 +1,35 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
- <div class="container bg_main_container">
+ <div class="container">
  </br>
-    <div class="bg-faded p-4 my-4">
+    <div id="dashContainer" class="bg-faded p-4 my-4">
+		<div id="dash" class="row">
+	    	<div id="myinfo" class="col-sm-6">
+	      		<table id="myinfotable" class="table">
+				    <thead>
+				      <tr>
+				        <th id="mybalance">MY Balance</th>
+				      </tr>
+				    </thead>
+				    <tbody>
+				      <tr>
+				        <td>
+				        	<div id="dashWon">Won</div>
+				        	<div id="myWonBalance"></div>
+				        </td>
+				      </tr>
+				      <tr>
+				        <td>
+				        	<div id="dashCoin"></div>
+				        	<div id="myCoinBalance"></div>
+				        </td>
+				      </tr>
+				    </tbody>
+				  </table>
+	    	</div>
+	    	<div class="col-sm-6" style="background-color:pink;">
+	      		Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto.    
+	    	</div>
+	  	</div>
 		<img class="img-fluid float-center align-center mr-4 d-none d-lg-block"  src="/resources/images/home/bitcoin_dashboard.jpg" align="center">
      	<img class="img-fluid float-center align-center mr-4 d-none d-lg-block"  src="/resources/images/home/bitcoin_graph.jpg" alt="" align="center">
 	</div>

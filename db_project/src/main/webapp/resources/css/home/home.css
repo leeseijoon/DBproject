@@ -1,0 +1,47 @@
+/*!
+ * Start Bootstrap - Business Casual (https://startbootstrap.com/template-overviews/business-casual)
+ * Copyright 2013-2017 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-business-casual/blob/master/LICENSE)
+ */
+#dashboard{
+	
+	
+	
+}
+
+#myinfotable{
+	background-color: black;
+	color: white;
+}
+#dashContainer{
+	padding-top: 15px;
+    padding-right: 20px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+}
+#dash{
+	max-width: 950px;
+	margin: auto;
+}
+
+#mybalance{
+	font-size: 80%;
+	
+}
+#myInfo{
+	font-size: 80%;
+}
+#dashWon{
+	font-size: 100%;
+}
+#myWonBalance{
+	font-size: 200%;
+}
+#dashCoin{
+	font-size: 100%;
+}
+
+#myCoinBalance{
+	font-size: 200%;
+}
+

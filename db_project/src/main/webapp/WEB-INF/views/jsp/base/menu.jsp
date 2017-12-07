@@ -13,17 +13,17 @@
               		</a>
             	</li>
             	<li class="nav-item px-lg-4">
-              		<a class="nav-link text-uppercase text-expanded text-black" href="/test"><b>chart</b>                <span class="sr-only">(current)</span>
+              		<a class="nav-link text-uppercase text-expanded text-black" href="/chart/BTC"><b>chart</b>                <span class="sr-only">(current)</span>
 					</a>
 				</li>
 				<li class="nav-item px-lg-4">
-              		<a class="nav-link text-uppercase text-expanded text-black" href="index.html"><b>Trade</b></a>
+              		<a class="nav-link text-uppercase text-expanded text-black" href="/trade/BTC"><b>Trade</b></a>
             	</li>
             	<li class="nav-item px-lg-4">
-              		<a class="nav-link text-uppercase text-expanded text-black" href="index.html"><b>History</b></a>
+              		<a class="nav-link text-uppercase text-expanded text-black" href="/history/BTC"><b>History</b></a>
             	</li>
             	<li class="nav-item px-lg-4">
-              		<a class="nav-link text-uppercase text-expanded text-black" href="index.html"><b>Deposits/Withdrawals</b></a>
+              		<a class="nav-link text-uppercase text-expanded text-black" href="/depoWith"><b>Deposits/Withdrawals</b></a>
             	</li>
             	<li class="nav-item px-lg-4">
               		<a class="nav-link text-uppercase text-expanded text-black" href="/board/boardList"><b>free_board</b></a>
@@ -33,4 +33,4 @@
 	</div>
 </nav>
 </div>
-<div id="content_container">
+<div class="bg_main_container" id="bg_main content_container">
