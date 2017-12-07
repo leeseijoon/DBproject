@@ -8,6 +8,25 @@ $(document).ready(function(){
 		
 });
 
+function setComma(num){
+	var len, point, str; 
+    
+    num = num + ""; 
+    point = num.length % 3 ;
+    len = num.length; 
+   
+    str = num.substring(0, point); 
+    while (point < len) { 
+        if (str != "") str += ","; 
+        str += num.substring(point, point + 3); 
+        point += 3; 
+    } 
+     
+    return str;
+
+
+}
+
 function getExchangeRate(){
 	//처음 화면 띄워질때 시세값 가져옴
 	$.ajax ({
@@ -15,11 +34,11 @@ function getExchangeRate(){
 		url		: "https://api.coinone.co.kr/ticker/?format=json&currency",
 		cache : false,
 		success	: function (list) {
-			btc_last = list.btc["last"];
-			eth_last = list.eth["last"];
-			xrp_last = list.xrp["last"];
+			btc_last = setComma(list.btc["last"]);
+			eth_last = setComma(list.eth["last"]);
+			xrp_last = setComma(list.xrp["last"]);
 
-			str_price="BCH "+btc_last+" | ETH "+eth_last+ " | XRP "+xrp_last;
+			str_price="BCH "+btc_last+"￦ | ETH "+eth_last+ "￦ | XRP "+xrp_last+"￦";
 			$("#last_price").html (str_price);
 			
 		},
@@ -39,11 +58,11 @@ function getExchangeRate(){
 			url		: "https://api.coinone.co.kr/ticker/?format=json&currency",
 			cache : false,
 			success	: function (list) {
-				btc_last = list.btc["last"];
-				eth_last = list.eth["last"];
-				xrp_last = list.xrp["last"];
+				btc_last = setComma(list.btc["last"]);
+				eth_last = setComma(list.eth["last"]);
+				xrp_last = setComma(list.xrp["last"]);
 
-				str_price="BTC "+btc_last+" | ETH "+eth_last+ " | XRP "+xrp_last;
+				str_price="BCH "+btc_last+"￦ | ETH "+eth_last+ "￦ | XRP "+xrp_last+"￦";
 				$("#last_price").html (str_price);
 				
 			},
