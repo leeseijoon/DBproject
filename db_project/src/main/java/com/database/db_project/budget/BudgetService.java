@@ -22,4 +22,8 @@ public class BudgetService {
 	public List<Budget> findOne(Budget entity) throws Exception {
 		return budgetRepository.findOne(entity);
 	}
+	
+	public List<Budget> findAll(Budget entity) throws Exception {
+		return budgetRepository.findAll(entity);
+	}
 }

@@ -26,6 +26,15 @@ public class BudgetController {
 	@Autowired
 	private BudgetService budgetService;
 	
+	//모든 budget 정보 가져오기
+		@RequestMapping(value = "/budget/GetBudget.json", method = RequestMethod.POST)
+		@ResponseBody
+		public List<Budget> GetBudget (@ModelAttribute Budget entity) throws Exception{
+			List<Budget> list = budgetService.findAll(entity);
+				
+			return list;
+		}
+	
 	//특정 user의 budget 정보 가져오기
 	@RequestMapping(value = "/budget/GetUserBudget.json", method = RequestMethod.POST)
 	@ResponseBody

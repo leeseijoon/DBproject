@@ -20,4 +20,9 @@ public class BudgetRepository {
 		return sqlSession.selectList("com.database.db_project.budget.findOne", entity);
 		
 	}
+	
+	public List<Budget> findAll(Budget entity) throws Exception{
+		return sqlSession.selectList("com.database.db_project.budget.findAll", entity);
+		
+	}
 }
