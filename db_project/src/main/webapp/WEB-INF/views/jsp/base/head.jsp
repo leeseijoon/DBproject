@@ -5,8 +5,8 @@
 <title>Coin</title>
 
 <!-- Bootstrap Core CSS -->
-<link href="/resources/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <!-- Custom CSS -->
 <link href="/resources/css/base/business-casual.css" rel="stylesheet">
 
