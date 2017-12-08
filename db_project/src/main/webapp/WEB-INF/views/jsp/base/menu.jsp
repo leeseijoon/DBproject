@@ -29,4 +29,4 @@
 
 <!-- for Main Content -->
 <div class="container-fluid"> 
-	<div class="row_content">
+	<div class="row_content row content">
