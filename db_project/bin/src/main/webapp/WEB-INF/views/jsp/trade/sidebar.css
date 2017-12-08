@@ -1,0 +1,11 @@
+.side-nav>li>a {
+    padding: 29px;
+    color: white;
+    background-color: #2E5087;
+}
+.side-nav>li>a:active, .side-nav>li>a:hover {
+    background-color: #264371;;
+}
+.side-nav>li:not(last-of-type) {
+    border-bottom: 1px solid #3C6BB7;
+}

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.database.db_project.trade">
+
+	<insert  id="create" parameterType ="com.database.db_project.trade.Trade" keyProperty="u_id">
+		INSERT INTO exchange
+    VALUES (
+    			(select *from (select max(e_idx)+1 from exchange) next),
+				#{u_id},
+				#{c_idx},
+				#{sell_buy},
+				#{e_price},
+				#{e_quantity},
+				#{e_date}
+			)
+	</insert>
+	
+	
+	<select id="findAll" resultType="com.database.db_project.trade.Trade" parameterType="com.database.db_project.trade.Trade">
+		SELECT * FROM exchange order by e_idx desc limit 10
+	</select>
+
+	<select id="find6" resultType="com.database.db_project.trade.Trade" parameterType="com.database.db_project.trade.Trade">
+		SELECT * FROM exchange order by e_idx desc limit 6
+	</select>
+	
+	<select id="findmine" resultType="com.database.db_project.trade.Trade" parameterType="com.database.db_project.trade.Trade">
+		SELECT * FROM exchange WHERE "u_id" = #{u_id} order by e_idx desc limit 10
+	</select>
+	
+	
+</mapper>

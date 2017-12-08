@@ -81,8 +81,10 @@ function getExchangeRate(){
 	 var user_id = document.getElementById("u_id").value;
 	 str_html="";
 	 if(user_id=="null"){
-		 str_html+="<a href=\"/user/userLogin\">Login </a> | ";
-			 str_html+="<a href=\"/user/userJoin\">Join us</a>";
+		 
+		 str_html += "<ul class=\"nav navbar-nav navbar-right\">";
+		 str_html += "<li><a href=\"/user/userLogin\"><span class=\"glyphicon glyphicon-log-in\">";
+		 str_html+="</span> Login</a></li></ul>";
 	 }
 	 else{
 		 str_html+="<h4>";

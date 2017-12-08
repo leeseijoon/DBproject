@@ -1,0 +1,156 @@
+/*!
+ * Start Bootstrap - Business Casual (https://startbootstrap.com/template-overviews/business-casual)
+ * Copyright 2013-2017 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-business-casual/blob/master/LICENSE)
+ */
+#dashboard{
+	
+	
+	
+}
+
+#myinfotable{
+	background-color: black;
+	color: white;
+	margin-right:-500px;
+	max-width: 950px;
+}
+#dashContainer{
+	padding-top: 15px;
+    padding-right: 20px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+    
+}
+
+#dashBoardContainer{
+	background-color: black;
+	
+}
+#dash{
+	max-width: 950px;
+	margin: auto;
+}
+
+#mybalance{
+	font-size: 120%;
+	
+}
+#myInfo{
+	font-size: 80%;
+	min-width:450px;
+	
+}
+#dashWon{
+	padding-left: 5px;
+	font-size: 140%;
+}
+#myWonBalance{
+	margin-top: -15px;
+	padding-left: 8px;
+	font-size: 340%;
+	color: rgb(30,184,250);
+	font-weight: bold;
+	font-family:-webkit-body
+}
+#dashCoin{
+	padding-left: 5px;
+	font-size: 140%;
+}
+.c_button{
+	color:gray;
+	margin:auto;
+	font-size: 340%;
+}
+
+.c_button_bar{
+	color:rgb(150,150,150);
+	margin:auto;
+	font-size: 340%;
+}
+
+#button_div{
+	text-align:center;
+	padding:auto;
+	margin:auto;
+	border-style: solid;
+    border-color: white;
+    border-width: 0px 0px 3px 0px;
+}
+
+#myCoinBalance{
+	margin-top: -15px;
+    padding-left: 8px;
+	font-size: 340%;
+	color: rgb(30,184,250);
+	font-weight: bold;
+	font-family:-webkit-body
+}
+
+#coinInfoBox{
+	margin:auto;
+	width: 50%;
+	color: white;
+}
+
+#coin_container{
+	padding:auto;
+	background-color: black;
+	height: 233px;
+	min-width:450px;
+	border-style: solid;
+    border-color: white;
+    border-width: 0px 0px 0px 2px;
+}
+
+.titleword{
+	font-size: 150%;
+}
+
+#tlast_price{
+	font-size: 240%;
+}
+
+#yesterday_price{
+	font-size: 240%;
+}
+
+#detailInfo{
+	padding:auto;	
+	margin:auto;
+	background-color: black;
+	color:white;
+	 word-wrap: break-word;
+	 border-style: solid;
+    border-color: white;
+    border-width: 2px 0px 0px 0px;
+}
+
+#detailInfo_small{
+	margin:auto;
+	background-color: black;
+	color:white;
+	 word-wrap: break-word;
+	 border-style: solid;
+    border-color: white;
+    border-width: 2px 0px 0px 0px;
+}
+
+
+#chart_div{
+	margin:auto;
+	background-color: black;
+}
+
+.cse .gsc-search-button input.gsc-search-button-v2,
+input.gsc-search-button-v2 {
+    height: 26px !important;
+    margin-top: 0 !important;
+    min-width: 13px !important;
+    padding: 5px 26px !important;
+    width: 68px !important;
+}
+
+#div2{
+	min-height:200px;
+}

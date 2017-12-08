@@ -35,7 +35,7 @@
                     </div>
                 </c:if>
           <div>
-            <a href="user/userJoin">Create account</a>
+            <a href="/user/userJoin">Create account</a>
           </div>
           </br>
         </form>
