@@ -19,6 +19,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.database.db_project.board_free.Board_free;
 import com.database.db_project.board_free.Board_freeService;
+import com.database.db_project.history.History;
 import com.database.db_project.userInfo.UserInfo;
 
 @Controller
@@ -28,9 +29,19 @@ public class ChartController {
 	
 
 	//게시판 목록 화면
-	@RequestMapping("/chart")
+	@RequestMapping("/chart/chartPrice")
 	public String chartView() {
-		return "chart/chartView";
+		return "chart/chartPrice/chartPriceView";
+	}
+	
+	@RequestMapping("chart/mychart")
+	public String mychartView() {
+		return "chart/mychart/mychartView";
+	}
+	
+	@RequestMapping("chart/chartInsite")
+	public String chartInsiteView() {
+		return "chart/chartInsite/chartInsiteView";
 	}
 	///
 	//test
@@ -39,4 +50,8 @@ public class ChartController {
 	public String adminView() {
 		return "admin/adminView";
 	}
+	
+
 }
+
+

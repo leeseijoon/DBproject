@@ -14,4 +14,27 @@
 		SELECT * FROM budget where u_id=#{u_id}
 	</select>
 	
+	<select id="findmine_sell_month" resultType="com.database.db_project.history.History" parameterType="com.database.db_project.history.History">
+	 SELECT c_idx, e_date, sum(e_quantity) e_quantity FROM exchange 
+ 	where e_date between date_add(now(), interval-1 month) and now() and u_id=#{u_id} and sell_buy=1
+ 	GROUP BY e_date, c_idx;
+	</select>
+	
+	<select id="findmine_buy_month" resultType="com.database.db_project.history.History" parameterType="com.database.db_project.history.History">
+	 SELECT c_idx, e_date, sum(e_quantity) e_quantity FROM exchange 
+ 	where e_date between date_add(now(), interval-1 month) and now() and u_id=#{u_id} and sell_buy=0
+ 	GROUP BY e_date, c_idx;
+	</select>
+	
+	<select id="findall_sell_month" resultType="com.database.db_project.history.History" parameterType="com.database.db_project.history.History">
+	 SELECT c_idx, e_date, sum(e_quantity) e_quantity FROM exchange 
+ 	where e_date between date_add(now(), interval-1 month) and now() and sell_buy=1
+ 	GROUP BY e_date, c_idx;
+	</select>
+	
+	<select id="findall_buy_month" resultType="com.database.db_project.history.History" parameterType="com.database.db_project.history.History">
+	 SELECT c_idx, e_date, sum(e_quantity) e_quantity FROM exchange 
+ 	where e_date between date_add(now(), interval-1 month) and now() and sell_buy=0
+ 	GROUP BY e_date, c_idx;
+	</select>
 </mapper>

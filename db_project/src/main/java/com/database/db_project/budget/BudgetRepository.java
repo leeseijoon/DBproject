@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.database.db_project.board_free.Board_free;
+import com.database.db_project.history.History;
 
 @Repository
 public class BudgetRepository {
@@ -24,5 +25,29 @@ public class BudgetRepository {
 	public List<Budget> findAll(Budget entity) throws Exception{
 		return sqlSession.selectList("com.database.db_project.budget.findAll", entity);
 		
+	}
+	
+	public List<Budget> findmine_buy_month(Budget entity) throws Exception{
+		List<Budget> list = sqlSession.selectList("com.database.db_project.budget.findmine_buy_month", entity);
+			
+		return list;
+	}
+	
+	public List<Budget> findmine_sell_month(Budget entity) throws Exception{
+		List<Budget> list = sqlSession.selectList("com.database.db_project.budget.findmine_sell_month", entity);
+			
+		return list;
+	}
+	
+	public List<Budget> findall_buy_month(Budget entity) throws Exception{
+		List<Budget> list = sqlSession.selectList("com.database.db_project.budget.findall_buy_month", entity);
+			
+		return list;
+	}
+	
+	public List<Budget> findall_sell_month(Budget entity) throws Exception{
+		List<Budget> list = sqlSession.selectList("com.database.db_project.budget.findall_sell_month", entity);
+			
+		return list;
 	}
 }

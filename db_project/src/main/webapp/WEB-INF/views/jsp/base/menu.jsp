@@ -13,7 +13,7 @@
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
         <li class="active"><a href="/home">Home</a></li>
-        <li><a href="/chart">Chart</a></li>
+        <li><a href="/chart/chartPrice">Chart</a></li>
         <li><a href="/trade/BTC">Trade</a></li>
         <li><a href="/history">History</a></li>
         <li><a href="/depoWith">Deposits/Withdrawal</a></li>

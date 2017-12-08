@@ -43,6 +43,42 @@ public class BudgetController {
 			
 		return list;
 	}
+	
+	//특정 user의 한달간 buy 값 가져오기(sum)
+	@RequestMapping(value = "/budget/GetUserBudget_buy_month.json", method = RequestMethod.POST)
+	@ResponseBody
+	public List<Budget> GetUserBudget_buy_month (@ModelAttribute Budget entity) throws Exception{
+		List<Budget> list = budgetService.findmine_buy_month(entity);
+			
+		return list;
+	}
+	
+	//특정 user의 한달간 sell 값 가져오기(sum)
+	@RequestMapping(value = "/budget/GetUserBudget_sell_month.json", method = RequestMethod.POST)
+	@ResponseBody
+	public List<Budget> GetUserBudget_sell_month (@ModelAttribute Budget entity) throws Exception{
+		List<Budget> list = budgetService.findmine_sell_month(entity);
+			
+		return list;
+	}
+	
+	//한달간 buy 값 가져오기(sum)
+		@RequestMapping(value = "/budget/GetBudget_buy_month.json", method = RequestMethod.POST)
+		@ResponseBody
+		public List<Budget> GetBudget_buy_month (@ModelAttribute Budget entity) throws Exception{
+			List<Budget> list = budgetService.findall_buy_month(entity);
+				
+			return list;
+		}
+		
+		// 한달간 sell 값 가져오기(sum)
+		@RequestMapping(value = "/budget/GetBudget_sell_month.json", method = RequestMethod.POST)
+		@ResponseBody
+		public List<Budget> GetBudget_sell_month (@ModelAttribute Budget entity) throws Exception{
+			List<Budget> list = budgetService.findall_sell_month(entity);
+				
+			return list;
+		}
 
-
+	
 }
