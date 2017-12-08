@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.database.db_project.history">
+
+	
+	<select id="findAll" resultType="com.database.db_project.history.History" parameterType="com.database.db_project.history.History">
+		SELECT * FROM exchange order by e_idx desc limit 20
+	</select>
+	
+	<select id="findCoin" resultType="com.database.db_project.history.History" parameterType="com.database.db_project.history.History">
+		SELECT * FROM exchange where c_idx = #{c_idx} order by e_idx desc limit 20
+	</select>
+	
+	<select id="findmine" resultType="com.database.db_project.history.History" parameterType="com.database.db_project.history.History">
+	SELECT * FROM exchange WHERE u_id = #{u_id} order by e_idx desc limit 20
+	</select>
+	
+</mapper>
