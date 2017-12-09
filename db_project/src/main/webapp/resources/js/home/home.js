@@ -73,6 +73,29 @@ XRP_close=[];
 
 
 
+function setComma_floor(nums){
+	var len, point, str; 
+	
+    var res = nums.toString();
+    temp=res.split(".");
+    num=temp[0];
+    
+    num = num + ""; 
+    point = num.length % 3 ;
+    len = num.length; 
+   
+    str = num.substring(0, point); 
+    while (point < len) { 
+        if (str != "") str += ","; 
+        str += num.substring(point, point + 3); 
+        point += 3; 
+    } 
+     
+    return str;
+
+
+}
+
 function setComma(num){
 	var len, point, str; 
     
@@ -91,7 +114,6 @@ function setComma(num){
 
 
 }
-
 
 
 
@@ -246,16 +268,16 @@ function getUsrBudget(){
 				for(i=0;i<4;i++){
 					coin_idx=list[i].c_idx
 					if(coin_idx==0){//원화
-						str_myWon=setComma(list[i].b_quantity);
+						str_myWon=setComma_floor(list[i].b_quantity);
 					}
 					else if(coin_idx==1){//BTC
-						str_myBTC=setComma(list[i].b_quantity);
+						str_myBTC=setComma_floor(list[i].b_quantity);
 					}
 					else if(coin_idx==2){//ETH
-						str_myETH=setComma(list[i].b_quantity);
+						str_myETH=setComma_floor(list[i].b_quantity);
 					}
 					else{// XRP
-						str_myXRP=setComma(list[i].b_quantity);
+						str_myXRP=setComma_floor(list[i].b_quantity);
 					}
 				}
 					
