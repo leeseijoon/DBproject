@@ -250,7 +250,6 @@ function historylist4() {
 		url		: "/history/GetHistoryList2.json",
 		data : {"u_id" : u_id},
 		success	: function (list) {
-			alert(list);
 			str_html = "<table class=\"table table-inbox table-hover\"><tbody><tr>";
 			str_html += "<th>Types</th><th>transaction</th><th>price</th><th>quantity</th><th>date</th></tr>";
 			
@@ -296,7 +295,6 @@ function historylist4() {
 		},
 		error		: function (a) {
 			console.log(a);
-			alert("zz");
 		}
 	});
 	    
