@@ -75,7 +75,6 @@ function getUsrBudget(){
 			url		: "/budget/GetUserBudget.json",
 			data : {"u_id" : u_id},
 			success	: function (list) {
-				alert(JSON.stringify(list));
 				//list
 				for(i=0;i<4;i++){
 					coin_idx=list[i].c_idx

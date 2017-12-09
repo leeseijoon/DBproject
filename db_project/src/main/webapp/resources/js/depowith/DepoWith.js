@@ -2,7 +2,7 @@
 	 
         $("#btndepo").click(function(){
         	
-        	alert($("#u_id"));
+ 
         	
             // 태크.val() : 태그에 입력된 값
             // 태크.val("값") : 태그의 값을 변경 

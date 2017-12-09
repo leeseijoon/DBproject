@@ -62,7 +62,7 @@ function getExchangeRate(){
 				eth_last = setComma(list.eth["last"]);
 				xrp_last = setComma(list.xrp["last"]);
 
-				str_price="BCH "+btc_last+"￦ | ETH "+eth_last+ "￦ | XRP "+xrp_last+"￦";
+				str_price="BTC "+btc_last+"￦ | ETH "+eth_last+ "￦ | XRP "+xrp_last+"￦";
 				$("#last_price").html (str_price);
 				
 			},
