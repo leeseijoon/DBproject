@@ -4,7 +4,6 @@
     <li class="active"><a href="/chart/chartPrice"">코인 가격</a></li>
     <li class="active"><a href="/chart/mychart"">나의 투자 차트</a></li>
     <li class="active"><a href="/chart/chartInsite"">사이트 내 코인 거래현황</a></li>
-	<li class="active"><a href="/chart/chartPrice"">가상 투자 이율 상위 유저 </a></li>
 	
 </ul>
 

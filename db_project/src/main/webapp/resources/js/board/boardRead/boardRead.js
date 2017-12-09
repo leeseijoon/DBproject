@@ -6,6 +6,55 @@ $(document).ready (function (){
 
 
 
+function b_delete(){
+	var f=document.DeleteForm;
+	$.ajax ({
+		method	: "post",
+		url		: "/board/GetBoardU_id.json",
+		data : {"b_no" : b_no},
+		success	: function (list) {
+			//아이디 체크
+			var user_id = document.getElementById("u_id").value;
+			var board_userid=list.u_id;
+			 if(user_id!=board_userid){
+				 alert("본인이 작성한 글만 삭제 가능합니다.");
+				 location.href="/board/boardList"; 
+			 }
+			 else{
+		
+				 str_html="/board/boardDelete?b_no="; 
+				 str_html+=b_no;
+				 
+				 var user_id = document.getElementById("u_id").value;
+				 $.ajax ({
+						method	: "post",
+						url		: str_html,
+						data : {"u_id" : user_id},
+						success	: function (list) {
+							location.href="/board/boardList"; 
+
+						},
+						complete	: function () {
+						},
+						error		: function (a) {
+							console.log(a);
+						}
+					});
+	
+			 }
+
+		},
+		complete	: function () {
+		},
+		error		: function (a) {
+			console.log(a);
+		}
+	});
+
+}
+
+
+
 function b_write(){
 	var user_id = document.getElementById("u_id").value;
 	 if(user_id=="null"){
@@ -60,6 +109,12 @@ function boardRead() {
 	str_html+= "<span class=\"glyphicon glyphicon-pencil\"></span> 글쓰기 </button>";
 	str_html+="<button type=\"button\" onclick=\"b_update()"; 
 	str_html+="\" class=\"btn btn-info btn-lg\"><span class=\"glyphicon glyphicon-edit\"></span> 수정 </button>";
+	
+
+	str_html+="<span align=\"right\">";
+	str_html+="<button type=\"button\" onclick=\"b_delete()\" class=\"btn btn-info btn-lg\">";
+	str_html+= "<span class=\"glyphicon glyphicon-erase\">삭제</span></button></span>"
+
 	$("#buttons").html (str_html);
 	
 	$.ajax ({
@@ -78,13 +133,13 @@ function boardRead() {
 			str_html += "</td></tr><tr><td class=\"active\" colspan=\"6\"><div id=\"board_contents\" class=\"input-group\" style=\"overflow:scroll; height:500px; padding:10px; background-color:rgb(255, 255, 255);\">";
 			str_html += list.b_content;
 			str_html += "</div></tr></td></tbody></table>";
+			
 			$("#BoardView").html (str_html);
 
 		},
 		complete	: function () {
 		},
 		error		: function (a) {
-			alert("error");
 			console.log(a);
 		}
 	});

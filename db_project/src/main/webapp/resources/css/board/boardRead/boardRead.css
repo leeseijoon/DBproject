@@ -1,0 +1,4 @@
+#board_contents{
+    display: inline-block;
+    width:-webkit-fill-available;
+}

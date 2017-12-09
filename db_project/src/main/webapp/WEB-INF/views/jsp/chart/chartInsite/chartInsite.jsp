@@ -4,7 +4,6 @@
     <li class="active"><a href="/chart/chartPrice"">코인 가격</a></li>
     <li class="active"><a href="/chart/mychart"">나의 투자 차트</a></li>
     <li class="active"><a href="/chart/chartInsite"">사이트 내 코인 거래현황</a></li>
-	<li class="active"><a href="/chart/chartPrice"">가상 투자 이율 상위 유저 </a></li>
 	
 </ul>
 
@@ -12,7 +11,9 @@
 	
 	<div>
 		<h2>코인 보유 비율</h2>
-		<div id="chart_pie"></div>
+		<div id="piechart_3d" style="width: 900px; height: 500px;"></div>
+		<h2>한달간 코인 거래 비율</h2>
+		<div id="piechart_3dex" style="width: 900px; height: 500px;"></div>
 	</div>
 	<div>
 		<h2>BTC</h2>

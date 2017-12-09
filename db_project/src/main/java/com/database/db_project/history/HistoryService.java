@@ -29,4 +29,13 @@ public class HistoryService {
 	public List<History> findmine(String u_id) throws Exception {
 		return historyRepository.findmine(u_id);
 	}
+	
+	public List<History> getvolume(String u_id) throws Exception {
+		return historyRepository.getvolume(u_id);
+	}
+	
+	public List<History> exchangeCount(String u_id) throws Exception {
+		return historyRepository.exchangeCount(u_id);
+	}
+	
 }

@@ -8,7 +8,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="#">Logo</a>
+      <a class="navbar-brand">DB</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
@@ -18,7 +18,6 @@
         <li><a href="/history">History</a></li>
         <li><a href="/depoWith">Deposits/Withdrawal</a></li>
         <li><a href="/board/boardList">FreeBoard</a></li>
-        <li><a href="/admin">Admin</a></li>
       </ul>
  
 			<div id="userlist"></div>

@@ -23,9 +23,15 @@ $(document).ready (function (){
 
 //차트
 	google.charts.load('current', {packages: ['corechart', 'line']});
-  	google.charts.setOnLoadCallback(mychart);
+	google.charts.load("current", {packages:["corechart"]});
 
+  	google.charts.setOnLoadCallback(mychart);
+  	
+  	
 });
+
+
+
 
 function mychart(){
 	//buy
@@ -173,6 +179,67 @@ function mychart(){
 						      charts2.draw(chartdatas2, options);
 						      var charts3 = new google.visualization.LineChart(document.getElementById('chart_div_XRP_sell'));
 						      charts3.draw(chartdatas3, options);
+						      
+						      
+						     
+						      $.ajax ({
+						  		method	: "post",
+						  		url		: "/chart/volumeRate.json",
+						  		success	: function (list) {
+						  			var datap = google.visualization.arrayToDataTable([
+				  				        ['Coin', 'Volume'],
+				  				        ['BTC', list[0].e_quantity],
+				  				        ['ETH', list[1].e_quantity],
+				  				        ['XRP', list[2].e_quantity]
+				  				      ]);
+						  			var optionsp = {
+						  			        title: 'Insite Users Coin Volume',
+						  			        is3D: true,
+						  			      };
+		
+
+						  			      var chartss = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+						  			      chartss.draw(datap, optionsp);
+						  		},
+						  		complete	: function () {
+						  			
+
+						  		},
+						  		error		: function (a) {
+						  			console.log(a);
+						  			alert("error");
+						  		}
+						  	});
+						      
+						      
+						      $.ajax ({
+							  		method	: "post",
+							  		url		: "/chart/exchangeCount.json",
+							  		success	: function (list) {
+							  			var dataps = google.visualization.arrayToDataTable([
+					  				        ['Coin', 'Volume'],
+					  				        ['BTC', list[0].e_idx],
+					  				        ['ETH', list[1].e_idx],
+					  				        ['XRP', list[2].e_idx]
+					  				      ]);
+							  			var optionspp = {
+							  			        title: 'Insite Users Coin Volume',
+							  			        is3D: true,
+							  			      };
+							  	
+
+							  			      var chartsss = new google.visualization.PieChart(document.getElementById('piechart_3dex'));
+							  			      chartsss.draw(dataps, optionspp);
+							  		},
+							  		complete	: function () {
+							  			
+
+							  		},
+							  		error		: function (a) {
+							  			console.log(a);
+							  			alert("error");
+							  		}
+							  	});
 
 				},
 				error		: function (a) {

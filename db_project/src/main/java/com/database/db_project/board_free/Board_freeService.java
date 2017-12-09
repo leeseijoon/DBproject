@@ -34,6 +34,11 @@ public class Board_freeService {
 		return board_freeRepository.create(entity);
 	}
 	
+	public List<Board_free> delete(Board_free entity) throws Exception {
+		return board_freeRepository.delete(entity);
+	}
+	
+	
 	public List<Board_free> searchBoardListByTitle(String searchKeyword) throws Exception {
 		return board_freeRepository.searchBoardListByTitle(searchKeyword);
 	}

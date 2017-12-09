@@ -80,6 +80,14 @@ public class Board_freeController {
 		return "redirect:/board/boardList";
 	}
 	
+	//게시판 삭제
+		@RequestMapping(value = "/board/boardDelete", method = RequestMethod.POST)
+		public String boardDelete (HttpServletRequest request, @ModelAttribute("model_entity") 
+			@Validated Board_free entity, BindingResult errors) throws Exception {
+			board_freeService.delete(entity);
+			return "redirect:/board/boardList";
+		}
+	
 	
 	//검색한 게시판리스트 정보 가져오기
 	@RequestMapping(value = "/board/GetSearchBoardList.json", method = RequestMethod.POST)

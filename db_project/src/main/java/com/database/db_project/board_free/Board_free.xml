@@ -14,6 +14,10 @@
 			)
 	</insert>
 	
+	<delete id="delete"  parameterType ="com.database.db_project.board_free.Board_free">
+		delete from board_free where u_id=#{u_id} and b_no=#{b_no};
+	</delete>
+	
 	<update id="updateHit" parameterType="com.database.db_project.board_free.Board_free">
     	update board_free
     	set b_hit = b_hit + 1

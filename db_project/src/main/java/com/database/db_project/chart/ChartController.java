@@ -20,12 +20,15 @@ import org.springframework.web.servlet.ModelAndView;
 import com.database.db_project.board_free.Board_free;
 import com.database.db_project.board_free.Board_freeService;
 import com.database.db_project.history.History;
+import com.database.db_project.history.HistoryService;
 import com.database.db_project.userInfo.UserInfo;
 
 @Controller
 public class ChartController {
 	@Autowired
 	private ChartService chartService;
+	@Autowired
+	private HistoryService historyService;
 	
 
 	//게시판 목록 화면
@@ -43,14 +46,27 @@ public class ChartController {
 	public String chartInsiteView() {
 		return "chart/chartInsite/chartInsiteView";
 	}
-	///
-	//test
-	///
-	@RequestMapping("/admin")
-	public String adminView() {
-		return "admin/adminView";
+
+	
+	
+	//회원들 코인 보유량 가져오기
+	@RequestMapping(value = "/chart/volumeRate.json", method = RequestMethod.POST)
+	@ResponseBody
+	public List<History> volumeRate (String u_id) throws Exception{
+		
+		List<History> list= historyService.getvolume(u_id);
+		return list;
 	}
 	
+	//회원들 코인 거래량 가져오기
+		@RequestMapping(value = "/chart/exchangeCount.json", method = RequestMethod.POST)
+		@ResponseBody
+		public List<History> exchangeCount (String u_id) throws Exception{
+			
+			List<History> list= historyService.exchangeCount(u_id);
+			return list;
+		}
+
 
 }
 

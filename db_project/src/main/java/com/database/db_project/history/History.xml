@@ -15,4 +15,19 @@
 	SELECT * FROM exchange WHERE u_id = #{u_id} order by e_idx desc limit 20
 	</select>
 	
+	<select id="getvolume" resultType="com.database.db_project.history.History" parameterType="com.database.db_project.history.History">
+	 SELECT c_idx, sum(e_quantity) e_quantity FROM exchange 
+ 	GROUP BY c_idx order by c_idx desc
+	</select>
+	
+	<select id="exchangeCount" resultType="com.database.db_project.history.History" parameterType="com.database.db_project.history.History">
+	 select c_idx, count(e_idx) e_idx
+	from exchange
+	where e_date between date_add(now(), interval-1 month)
+	and now()
+	group by c_idx
+	order by count(e_idx) desc
+	</select>
+	
+	
 </mapper>

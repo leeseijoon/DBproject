@@ -25,6 +25,13 @@ public class Board_freeRepository {
 		return list;
 	}
 	
+	//게시글 추가(글 작성)
+	public List<Board_free> delete(Board_free entity) throws Exception{
+		List<Board_free> list = sqlSession.selectList("com.database.db_project.board_free.delete", entity);
+			
+		return list;
+	}
+	
 	//하나의 게시글 select
 	public Board_free findOne(Board_free entity) throws Exception{
 		return sqlSession.selectOne("com.database.db_project.board_free.findOne", entity);

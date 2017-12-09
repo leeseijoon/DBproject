@@ -34,5 +34,18 @@ public class HistoryRepository {
 			
 		return list;
 	}
+	
+	public List<History> getvolume(String u_id) throws Exception{
+		List<History> list = sqlSession.selectList("com.database.db_project.history.getvolume", u_id);
+			
+		return list;
+	}
+	
+	public List<History> exchangeCount(String u_id) throws Exception{
+		List<History> list = sqlSession.selectList("com.database.db_project.history.exchangeCount", u_id);
+			
+		return list;
+	}
+	
 
 }
