@@ -43,7 +43,7 @@
  			url		: "/budget/GetUserBudget.json",
  			data : {"u_id" : u_id},
  			success	: function (list) {
- 				alert(JSON.stringify(list));
+ 				
  				//list
  				str_myWon = list[0].b_quantity;
  					
