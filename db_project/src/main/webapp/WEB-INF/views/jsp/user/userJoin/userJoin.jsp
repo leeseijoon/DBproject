@@ -10,7 +10,7 @@
           <h1>회원가입 <small>basic form</small></h1>
         </div>
         <div class="col-md-6 col-md-offset-3">
-          <form id="userJoin" action="/user/userJoin/send" method = "post">
+          <form name = "userJoin" id="userJoin" method = "post">
             <div class="form-group">
               <label for=""u_id"">아이디</label>
               <input type="email" class="form-control" id="u_id" name="u_id" placeholder="이메일 주소">
@@ -33,7 +33,7 @@
               	<input type="text" class="form-control" id="u_phonenum" name="u_phonenum" placeholder="핸드폰 번호를 입력해 주세요">
             </div>
             <div class="form-group text-center">
-              <button type="submit" class="btn btn-info">회원가입<i class="fa fa-check spaceLeft"></i></button>
+              <button type="submit" id = "btnjoin" name = "btnjoin" class="btn btn-info">회원가입<i class="fa fa-check spaceLeft"></i></button>
              </form>
               <form action="/user/userLogin">
               	<button type="submit" class="btn btn-warning">가입취소<i class="fa fa-times spaceLeft"></i></button>
