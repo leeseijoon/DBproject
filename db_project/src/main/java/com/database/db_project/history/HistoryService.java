@@ -30,9 +30,7 @@ public class HistoryService {
 		return historyRepository.findmine(u_id);
 	}
 	
-	public List<History> getvolume(String u_id) throws Exception {
-		return historyRepository.getvolume(u_id);
-	}
+	
 	
 	public List<History> exchangeCount(String u_id) throws Exception {
 		return historyRepository.exchangeCount(u_id);

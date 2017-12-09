@@ -50,4 +50,10 @@ public class BudgetRepository {
 			
 		return list;
 	}
+	
+	public List<Budget> getvolume(String u_id) throws Exception{
+		List<Budget> list = sqlSession.selectList("com.database.db_project.budget.getvolume", u_id);
+			
+		return list;
+	}
 }

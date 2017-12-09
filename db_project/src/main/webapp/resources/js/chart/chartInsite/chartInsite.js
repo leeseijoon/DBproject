@@ -188,9 +188,9 @@ function mychart(){
 						  		success	: function (list) {
 						  			var datap = google.visualization.arrayToDataTable([
 				  				        ['Coin', 'Volume'],
-				  				        ['BTC', list[0].e_quantity],
-				  				        ['ETH', list[1].e_quantity],
-				  				        ['XRP', list[2].e_quantity]
+				  				        ['BTC', list[1].b_quantity],
+				  				        ['ETH', list[2].b_quantity],
+				  				        ['XRP', list[3].b_quantity]
 				  				      ]);
 						  			var optionsp = {
 						  			        title: 'Insite Users Coin Volume',

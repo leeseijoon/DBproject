@@ -19,6 +19,8 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.database.db_project.board_free.Board_free;
 import com.database.db_project.board_free.Board_freeService;
+import com.database.db_project.budget.Budget;
+import com.database.db_project.budget.BudgetService;
 import com.database.db_project.history.History;
 import com.database.db_project.history.HistoryService;
 import com.database.db_project.userInfo.UserInfo;
@@ -29,6 +31,8 @@ public class ChartController {
 	private ChartService chartService;
 	@Autowired
 	private HistoryService historyService;
+	@Autowired
+	private BudgetService budgetService;
 	
 
 	//게시판 목록 화면
@@ -52,9 +56,9 @@ public class ChartController {
 	//회원들 코인 보유량 가져오기
 	@RequestMapping(value = "/chart/volumeRate.json", method = RequestMethod.POST)
 	@ResponseBody
-	public List<History> volumeRate (String u_id) throws Exception{
+	public List<Budget> volumeRate (String u_id) throws Exception{
 		
-		List<History> list= historyService.getvolume(u_id);
+		List<Budget> list= budgetService.getvolume(u_id);
 		return list;
 	}
 	
