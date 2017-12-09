@@ -42,4 +42,8 @@ public class BudgetService {
 	public List<Budget> findall_sell_month(Budget entity) throws Exception {
 		return budgetRepository.findall_sell_month(entity);
 	}
+	
+	public List<Budget> getvolume(String u_id) throws Exception {
+		return budgetRepository.getvolume(u_id);
+	}
 }

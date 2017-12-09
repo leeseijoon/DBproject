@@ -37,4 +37,9 @@
  	where e_date between date_add(now(), interval-1 month) and now() and sell_buy=0
  	GROUP BY e_date, c_idx;
 	</select>
+	
+	<select id="getvolume" resultType="com.database.db_project.budget.Budget" parameterType="com.database.db_project.budget.Budget">
+	 SELECT c_idx, sum(b_quantity) b_quantity FROM budget 
+ 	GROUP BY c_idx order by c_idx asc
+	</select>
 </mapper>
