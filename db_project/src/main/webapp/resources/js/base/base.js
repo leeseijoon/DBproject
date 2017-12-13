@@ -85,11 +85,15 @@ function getExchangeRate(){
 		 str_html += "<ul class=\"nav navbar-nav navbar-right\">";
 		 str_html += "<li><a href=\"/user/userLogin\"><span class=\"glyphicon glyphicon-log-in\">";
 		 str_html+="</span> Login</a></li></ul>";
+		 
 	 }
 	 else{
 		 str_html+="<h4>";
 		 str_html+=user_id;
 		 str_html+="님 환영합니다!</h4>";
+		 str_html += "<ul class=\"nav navbar-nav navbar-right\">";
+		 str_html += "<li><a href=\"/user/logout.do\"><span class=\"glyphicon glyphicon-log-in\">";
+		 str_html+="</span> Logout</a></li></ul>";
 	 }
 	 $("#userlist").html (str_html);
  }
